@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- css file  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- titolo  -->
+  <title>Griglia Campo Minato</title>
+
+</head>
+
+<!-- 
+1. dobbiamo costruire una web app quindi diamo le dimensioni della viewport
+2. costruiamo un container centralizzato con dimensioni fisse con elementi flex e wrap
+3. all'interno gli elementi verranno classificati con la classe square 
+4. ogni quadrato avrà dimensioni in rapporto a quelle del container (se abbiamo un griglia 8x8 la dimensione sarà 100% * 1/8)
+5. inseriamo una classe clicked che ha uno scopo simile a quella active, quando il quadrato verrà richiamata in js deve essere aggiunta o rimossa a seconda dei casi
+6. la classe clicked ci permetterà di cambiare il colore
+7. con la classe clicked visualizza il numero corrispondente
+8. (bonus?) a seconda se il numero è pari o dispari il colore sarà diverso
+ -->
+
+<body>
+  
+  <section class="main-wrapper">
+    
+    <div class="container">
+
+      <div class="square clicked">1</div>
+      <div class="square">2</div>
+      <div class="square">3</div>
+      <div class="square">4</div>
+      <div class="square clicked">5</div>
+      <div class="square">6</div>
+      <div class="square">7</div>
+      <div class="square">8</div>
+
+      <div class="square">9</div>
+      <div class="square clicked">10</div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- javascript file  -->
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>
