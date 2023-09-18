@@ -1,0 +1,73 @@
+/* 
+  1. dobbiamo costruire una web app quindi diamo le dimensioni della viewport
+  2. costruiamo un container centralizzato con dimensioni fisse con elementi flex e wrap
+  3. all'interno gli elementi verranno classificati con la classe square 
+  4. ogni quadrato avrà dimensioni in rapporto a quelle del container (se abbiamo un griglia 8x8 la dimensione sarà 100% * 1/8)
+  5. inseriamo una classe clicked che ha uno scopo simile a quella active (quando il quadrato verrà richiamata in js deve essere aggiunta o rimossa a seconda dei casi)
+  6. la classe clicked ci permetterà di cambiare il colore
+  7. inseriamo un elemento span dentro lo square con il numero che identifica il quadrato
+  8. di deafult il numero non deve essere visibile
+  9. con la classe clicked visualizza il numero corrispondente
+  10. (bonus?) a seconda se il numero è pari o dispari il colore sarà diverso
+*/
+
+/* ------ GENERAL ----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 25px;
+  color: white;
+  background-color: lightseagreen;
+}
+
+/* ------ MAIN ----- */
+
+.main-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ---- CONTENITORE --- */
+
+.container { 
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: burlywood;
+}
+
+
+/* ---- Quadrati --- */
+.square {
+  height: calc(100% * 1/10);
+  width: calc(100% * 1/10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.square.clicked {
+  background-color: lightskyblue;
+}
+
+
+/* --- Quadrati: numero --- */
+.square span {
+  display: none;
+}
+
+.square.clicked span {
+  display: block;
+}
