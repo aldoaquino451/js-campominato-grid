@@ -1,12 +1,11 @@
 
 // 1. In base all'opzione scelta, uso il valore in value per sapere quanti quadrati ci sono per ogni riga e colonna
 const selectSize = document.getElementById('size-container');
-const squareSize = selectSize.value;
-
+let squareSize;
 
 // 2. Richiamiamo il container in js
 const container = document.querySelector('.container');
-container.innerHTML = '';
+reset();
 
 
 // 3. Creo l'elemento button in js con la scritta start e lo collego al container
@@ -17,18 +16,21 @@ header.append(btn);
 
 
 // 4. Al click del button il bottone scompare e viene generata la griglia
-btn.addEventListener('click', function() {
+btn.addEventListener('click', handleClick);
 
-  // reset();
-  container.innerHTML = '';
+function handleClick() {
+
+  reset();
+
+  squareSize = selectSize.value;
 
   generate(squareSize);
 
-});
+}
 
-// function reset() {
-//   container.innerHTML = '';
-// }
+function reset() {
+  container.innerHTML = '';
+}
 
 // 5. Dichiaro la funzione per la creazione della griglia
 function generate(size) {
