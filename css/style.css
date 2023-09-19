@@ -3,6 +3,7 @@
 
 :root {
   --color-bg: lightsteelblue;
+  --number-of-square: 8;
 }
 
 * {
@@ -46,8 +47,8 @@ body {
 
 /* ---- Quadrati --- */
 .square {
-  height: calc(100% * 1/10);
-  width: calc(100% * 1/10);
+  height: calc(100% * 1/var(--number-of-square));
+  width: calc(100% * 1/var(--number-of-square));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +64,6 @@ body {
 /* --- Bottone --- */
 button {
   padding: 20px 40px;
-  /* border: 1px solid rgba(0, 0, 0, 0.3); */
   background-color: lightblue;
   border-radius: 20px;
   border: none;
@@ -80,6 +80,17 @@ button:hover {
   color: white;
 }
 
+.btn.hide {
+  display: none !important; 
+}
+
+select {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
 /* --- Utilities --- */
 .square.clicked {
   background-color: lightskyblue;
@@ -89,6 +100,4 @@ button:hover {
   display: block;
 }
 
-.hide {
-  display: none;
-}
+

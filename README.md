@@ -31,18 +31,14 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 ## JavaScript
 
-1. Richiamiamo il coontainer in js
-2. Resetttiamo il container
-3. Creo un ciclo da 64
-   1. nel ciclo creo un elemento div
-   2. a ogni elemento div assegno la classe square 
-   3. a ogni elemento assegno l'evento click
-4. L'evento click sarà una funzione che 
-    1. permetterà di aggiugnere o rimuovere la classe clicked
-    2. genera un numero per ogni cella in ordine crescente (il numero tot di celle viene deciso dall'indice del ciclo for quindi possiamo usare quel dato per assegnare questo numero)
-    3. deve essere visualizzato il numero solo quando il quadrato viene cliccato
-5. (Bonus?) ogni cella corrisponde ad un numero: in base a se è pari o dispari assegna una classe diversa (o solo il background)
-
-1. inseriamo un bottone che fa partire il gioco
-    1. il bottone viene nascosto 
-    2. viene visualizzato il container
+1. **Bonus:** In base all'opzione scelta nel select, uso il valore contenuto in value per indicare quanti quadrati ci sono in ogni riga e colonna e in totale. Con quel valore assegno anche le dimensioni heigh e width.
+2. Richiamiamo il container in js
+3. Creo l'elemento button in js con la scritta start e lo collego al container
+4. Al click del button il bottone scompare e viene generata la griglia
+5. Dichiaro la funzione per la creazione della griglia
+    1. elemento con classe square che collego al container
+    2. tramite variabili custom css modifichiamo il valore di width e height dei quadrati
+    3. ogni quadrato viene attivato al click
+6. Dichiaro la funzione addRemove
+    1. al click si attiva o disattiva l'elemento
+    2. assegna un numero uaguale all'indice 
