@@ -3,7 +3,7 @@
 
 :root {
   --color-bg: lightsteelblue;
-  --number-of-square: 8;
+  --number-of-square: 10;
 }
 
 * {
@@ -31,6 +31,13 @@ body {
   align-items: center;
 }
 
+/* ---- CONTENITORE --- */
+
+.header {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
 
 /* ---- CONTENITORE --- */
 
@@ -63,14 +70,13 @@ body {
 
 /* --- Bottone --- */
 button {
-  padding: 20px 40px;
+  padding: 10px 30px;
   background-color: lightblue;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
-  box-shadow: 4px 4px black;
   color: white;
   font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }

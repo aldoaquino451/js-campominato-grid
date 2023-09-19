@@ -1,8 +1,7 @@
 
 // 1. In base all'opzione scelta, uso il valore in value per sapere quanti quadrati ci sono per ogni riga e colonna
 const selectSize = document.getElementById('size-container');
-const squareRow = selectSize.value;
-const squareTot = squareRow * squareRow;
+const squareSize = selectSize.value;
 
 
 // 2. Richiamiamo il container in js
@@ -12,24 +11,29 @@ container.innerHTML = '';
 
 // 3. Creo l'elemento button in js con la scritta start e lo collego al container
 const btn = document.createElement('button');
+const header = document.querySelector('.header');
 btn.innerHTML = 'START';
-container.append(btn);
+header.append(btn); 
 
 
 // 4. Al click del button il bottone scompare e viene generata la griglia
 btn.addEventListener('click', function() {
 
-  btn.style.display = 'none';
+  // reset();
+  container.innerHTML = '';
 
-  generate(squareRow, squareTot);
+  generate(squareSize);
 
 });
 
+// function reset() {
+//   container.innerHTML = '';
+// }
 
 // 5. Dichiaro la funzione per la creazione della griglia
-function generate(numb, numb2) {
+function generate(size) {
   
-  for ( let i = 1; i <= numb2; i++ ) {
+  for ( let i = 1; i <= size * size; i++ ) {
 
     // elemento con classe square che collego al container
     const square = document.createElement('div');
@@ -37,7 +41,7 @@ function generate(numb, numb2) {
     container.append(square);
     
     // tramite variabili custom css modifichiamo il valore di width e height dei quadrati
-    square.style.setProperty("--number-of-square", numb);
+    square.style.setProperty("--number-of-square", size);
 
     // ogni quadrato viene attivato al click
     toggleClicked(square, i);  
